@@ -1,7 +1,9 @@
 import 'package:drinkonme/features/drink_offers/domain/drink_offer.dart';
 import 'package:drinkonme/features/drink_offers/presentation/providers/drink_offers_providers.dart';
+import 'package:drinkonme/features/redemptions/presentation/redemption_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class TodayDrinkOffersSection extends ConsumerWidget {
   const TodayDrinkOffersSection({required this.barId, super.key});
@@ -50,17 +52,19 @@ class TodayDrinkOffersSection extends ConsumerWidget {
   }
 }
 
-class _DrinkOfferCard extends StatelessWidget {
+class _DrinkOfferCard extends ConsumerWidget {
   const _DrinkOfferCard({required this.offer});
 
   final DrinkOffer offer;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final available = offer.availableQuantity;
     final progress = offer.totalQuantity == 0
         ? 0.0
         : (offer.redeemedQuantity / offer.totalQuantity).clamp(0.0, 1.0);
+    final prepareState = ref.watch(prepareRedemptionControllerProvider);
+    final isPreparing = prepareState.isLoading;
 
     return Card(
       child: Padding(
@@ -109,6 +113,33 @@ class _DrinkOfferCard extends StatelessWidget {
                 ),
                 _QuantityChip(label: 'Disponíveis', value: available),
               ],
+            ),
+            const SizedBox(height: 14),
+            if (prepareState.hasError) ...[
+              Text(
+                prepareState.error.toString(),
+                style: TextStyle(color: Theme.of(context).colorScheme.error),
+              ),
+              const SizedBox(height: 10),
+            ],
+            FilledButton(
+              onPressed: available <= 0 || isPreparing
+                  ? null
+                  : () async {
+                      final token = await ref
+                          .read(prepareRedemptionControllerProvider.notifier)
+                          .prepare(offer.offerId);
+
+                      if (context.mounted && token != null) {
+                        context.go('/redemptions/token/${token.id}');
+                      }
+                    },
+              child: isPreparing
+                  ? const SizedBox.square(
+                      dimension: 18,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    )
+                  : const Text('Resgatar drink'),
             ),
           ],
         ),

@@ -16,6 +16,7 @@ import 'package:drinkonme/features/favorites/presentation/favorites_screen.dart'
 import 'package:drinkonme/features/home/presentation/home_screen.dart';
 import 'package:drinkonme/features/profile/presentation/profile_screen.dart';
 import 'package:drinkonme/features/redemptions/presentation/redemption_history_screen.dart';
+import 'package:drinkonme/features/redemptions/presentation/redemption_token_screen.dart';
 import 'package:drinkonme/features/subscriptions/presentation/subscriptions_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -86,6 +87,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/redemptions/history',
         builder: (context, state) => const RedemptionHistoryScreen(),
+      ),
+      GoRoute(
+        path: '/redemptions/token/:tokenId',
+        builder: (context, state) =>
+            RedemptionTokenScreen(tokenId: state.pathParameters['tokenId']!),
       ),
       GoRoute(
         path: '/bar-admin/dashboard',
