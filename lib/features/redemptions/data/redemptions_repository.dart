@@ -1,4 +1,5 @@
 import 'package:drinkonme/features/redemptions/domain/redemption_token.dart';
+import 'package:drinkonme/features/redemptions/domain/redemption_validation_result.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class RedemptionsRepository {
@@ -39,5 +40,24 @@ class RedemptionsRepository {
         .single();
 
     return RedemptionToken.fromJson(row);
+  }
+
+  Future<RedemptionValidationResult> validateRedemptionToken(
+    String token,
+  ) async {
+    final response = await _requiredClient.rpc(
+      'validate_redemption_token',
+      params: {'p_token': token.trim()},
+    );
+
+    final row = switch (response) {
+      final List<dynamic> list when list.isNotEmpty => list.first,
+      final Map<String, dynamic> map => map,
+      _ => throw StateError('Resposta inesperada ao validar token.'),
+    };
+
+    return RedemptionValidationResult.fromJson(
+      Map<String, dynamic>.from(row as Map),
+    );
   }
 }
