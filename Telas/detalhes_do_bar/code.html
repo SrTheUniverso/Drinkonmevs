@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bar Details</title>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec5b13",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221610",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="fixed top-0 left-0 right-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between h-16">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined text-gray-900 dark:text-white">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Detalhes do Bar</h1>
+<div class="w-8"></div>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class="relative h-56 w-full">
+<img alt="Bar image" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG5kpxjyR1SRa5IzGbDf8uPz-vpeDp19gTvLdzZSL5sWtgQL0ihq56QWbVlTaCALW3IE5fbyB0qIG-Le_29SAGUWM7CQ2lja_iJUBwbScmGapKJ1KvZN5UjrfUNI-W-rwOiM_xGIs2cNxX4Z-fwZbeinmmgfm-U4Ru78TC6jCzCPkkkvkYzyaJuFADi-7tMmy6r7sY-KcNTsx68M_CTuKMW5UrDuTRMbGNG8Zz4jr97N0hYI9Rp917TLKn59V-n6cHYqZhrqN5y48"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent"></div>
+</div>
+<div class="p-4 sm:p-6 -mt-8 relative">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-lg">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">O Refúgio</h2>
+<p class="text-gray-600 dark:text-gray-400 mt-1">Rua das Flores, 123, Centro</p>
+<div class="mt-6 space-y-4 text-sm">
+<div class="flex justify-between items-center">
+<span class="text-gray-500 dark:text-gray-400">Horário</span>
+<span class="font-semibold text-gray-800 dark:text-gray-200">18h - 02h</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-500 dark:text-gray-400">Distância</span>
+<span class="font-semibold text-gray-800 dark:text-gray-200">1.2 km</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 sm:px-6 mt-2">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Drinks Grátis</h3>
+<div class="space-y-3">
+<div class="bg-background-light/50 dark:bg-background-dark/50 p-4 rounded-lg flex items-center justify-between">
+<span class="text-gray-800 dark:text-gray-200">Caipirinha</span>
+<span class="material-symbols-outlined text-primary">local_bar</span>
+</div>
+<div class="bg-background-light/50 dark:bg-background-dark/50 p-4 rounded-lg flex items-center justify-between">
+<span class="text-gray-800 dark:text-gray-200">Cerveja Artesanal</span>
+<span class="material-symbols-outlined text-primary">local_bar</span>
+</div>
+<div class="bg-background-light/50 dark:bg-background-dark/50 p-4 rounded-lg flex items-center justify-between">
+<span class="text-gray-800 dark:text-gray-200">Vinho da Casa</span>
+<span class="material-symbols-outlined text-primary">local_bar</span>
+</div>
+</div>
+</div>
+<div class="px-4 sm:px-6 pt-8 pb-32">
+<button class="w-full bg-primary text-white font-bold h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors">
+          Resgatar Drink
+        </button>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 z-10 bg-background-light dark:bg-background-dark border-t border-gray-200/50 dark:border-gray-800/50">
+<div class="container mx-auto px-4 h-20 flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">local_bar</span>
+<span class="text-xs font-medium">Bares</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-xs font-medium">Resgates</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Perfil</span>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec5b13",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221610",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div>
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold pr-10">Gerenciar Bebidas</h1>
+</div>
+</header>
+<main class="p-4">
+<section class="mb-8">
+<h2 class="text-xl font-bold mb-4">Bebidas Atuais</h2>
+<div class="space-y-3">
+<div class="flex items-center gap-4 rounded-lg p-3 bg-white/5 dark:bg-black/10">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhzF72KZygGM-7JhSuluhCCdEbV1p99GLLpA6JSfLYHP-KpRstjsS-MNJ6gXjUqFb-WbTSJBYUxpTq-_BPQCHuO_jV21_naJn22vrG_kJ6DbB4YOz1NUR32AM3icweBzDQxYZmy6Bgclks2URmNbZaEJmTtTjU94SNgWneoD5LST4zQNsEzL0LCRSagf4Ve_4zXXnd0inEc7CgjCmos7ow8K2wVggaTlrrFbuK5X6Oa7EDJFnrloTgOu7e3S7CtEdYJcg05PtGHzU");'></div>
+<div class="flex-1">
+<p class="font-medium text-gray-800 dark:text-gray-100">Mojito Clássico</p>
+<p class="text-sm text-green-500">Disponível</p>
+</div>
+<button class="flex size-8 shrink-0 items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-white/10 dark:hover:bg-black/20">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 bg-white/5 dark:bg-black/10">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqweBFJRB8wAlVHXhZO8ZDDAhMY8fR-8rTvg-Uw0w3O5dads5vk5UtSfr5zoVTonLyZtaUfehSc2MODYU92BwljMXkuqP2qfhS-oGVXVANkYvw2DmaaugehKUUMCOrzMDwuR4cxFZ_Zpvq4mOpS4aA1j6E3A0qpvE2QgT4Co-Dj55-QhfdsZg75Nkt7rpkuEvSpfl3P-u9yHxFyk0QeTPFFGVu7mIFqj_OYBZzEhNIbWgY7xSu2itKpqM1RYYaBTgOaAnFtfUTlD8");'></div>
+<div class="flex-1">
+<p class="font-medium text-gray-800 dark:text-gray-100">Caipirinha de Morango</p>
+<p class="text-sm text-red-500">Indisponível</p>
+</div>
+<button class="flex size-8 shrink-0 items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-white/10 dark:hover:bg-black/20">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 bg-white/5 dark:bg-black/10">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_nHzUfk52r4LxICcpDijQKEUqXW14USaRrwuXCdoVxiRDSXmaBnaq-zy6pDBnn_Ql76w4ppNBA9NhzdCR5aqfPaRMrE3umiUvTC_Ecwu3M6k95LLOf6Zx3uXoH_9lVp3485w0Fp7h-ThKS5N8QqdMFpo8i0p44gCmO1FF2uNSmKOzNy2Hw-3n6mfPZbLU9MeLPPfMJ2zTalQe3s7uhNoB2I7pc-LiOybQs_38vhVXSayge1xNCTin5rAt1V74tbx6eyhKrxGD7Q4");'></div>
+<div class="flex-1">
+<p class="font-medium text-gray-800 dark:text-gray-100">Margarita de Limão</p>
+<p class="text-sm text-green-500">Disponível</p>
+</div>
+<button class="flex size-8 shrink-0 items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-white/10 dark:hover:bg-black/20">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold mb-4">Adicionar Nova Bebida</h2>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium mb-1.5 text-gray-600 dark:text-gray-300" for="drink-name">Nome da Bebida</label>
+<input class="form-input w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white/10 dark:bg-black/20 focus:border-primary focus:ring-primary placeholder-gray-500 dark:placeholder-gray-400" id="drink-name" placeholder="Ex: Gin Tônica" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium mb-1.5 text-gray-600 dark:text-gray-300" for="description">Descrição</label>
+<textarea class="form-textarea w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white/10 dark:bg-black/20 focus:border-primary focus:ring-primary min-h-28 placeholder-gray-500 dark:placeholder-gray-400" id="description" placeholder="Descreva a bebida, ingredientes, etc."></textarea>
+</div>
+<div class="flex items-center justify-between">
+<label class="text-sm font-medium text-gray-600 dark:text-gray-300" for="availability">Disponibilidade</label>
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="sr-only peer" id="availability" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-300 dark:bg-gray-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div>
+<button class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold" type="submit">Salvar Bebida</button>
+</div>
+</form>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800">
+<nav class="flex justify-around py-2">
+<a class="flex flex-col items-center justify-center gap-1 w-full text-primary" href="#">
+<span class="material-symbols-outlined">liquor</span>
+<p class="text-xs font-medium">Bebidas</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-full text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-xs font-medium">Análise</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-full text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<p class="text-xs font-medium">Meu Bar</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-full text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium">Perfil</p>
+</a>
+</nav>
+</footer>
+</div>
+
+
+</body></html>

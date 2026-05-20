@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Plus+Jakarta+Sans:wght@400;500;700;800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec5b13",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221610",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div>
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="flex size-10 items-center justify-center rounded-full text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold tracking-tight text-slate-900 dark:text-white pr-10">Configurações</h1>
+</div>
+</header>
+<main class="p-4">
+<div class="space-y-8">
+<section>
+<h2 class="px-4 pb-2 text-xl font-bold text-slate-900 dark:text-white">Perfil</h2>
+<div class="space-y-2">
+<a class="flex items-center gap-4 rounded p-4 transition-colors hover:bg-primary/10" href="#">
+<div class="h-16 w-16 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgiNOF1P8nI9RfarSrQByuONrYkvTLbZtrzGcGxHPUUaZ82Ldcc6d4KAumvQ2IFLz9r3SOB0h4bW4UKkD2pOrbXl9mLW8KE0Xuc7qev4aq8HlRDFweIFa10qqEnRXa1FaibdDNAg3RTvJrO8lOlCUTCjfvqI61Sms1F6MD_AOo39W1l-uKdghb8eo1KMOWp83NPa0F_haLJR6_Gzf5iaZ2MkctUNC8zXPndLWXMY8JgbMaEYa00oXCldBUXLmCzctHIrwYh_6evnw");'></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Dados pessoais</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Editar perfil</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 rounded p-4 transition-colors hover:bg-primary/10" href="#">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Endereços</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Gerenciar endereços</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+</div>
+</section>
+<section>
+<h2 class="px-4 pb-2 text-xl font-bold text-slate-900 dark:text-white">Notificações</h2>
+<div class="space-y-2">
+<div class="flex items-center gap-4 rounded p-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Novos drinks</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Receber alertas sobre novos drinks</p>
+</div>
+<label class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-slate-200 dark:bg-slate-700 peer-checked:bg-primary after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-slate-300 dark:after:border-slate-600 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+</label>
+</div>
+<div class="flex items-center gap-4 rounded p-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Bares favoritos</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Receber alertas sobre bares favoritos</p>
+</div>
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-slate-200 dark:bg-slate-700 peer-checked:bg-primary after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-slate-300 dark:after:border-slate-600 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+</label>
+</div>
+</div>
+</section>
+<section>
+<h2 class="px-4 pb-2 text-xl font-bold text-slate-900 dark:text-white">Geral</h2>
+<div class="space-y-2">
+<a class="flex items-center gap-4 rounded p-4 transition-colors hover:bg-primary/10" href="#">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Pagamentos</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Gerenciar métodos de pagamento</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 rounded p-4 transition-colors hover:bg-primary/10" href="#">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Legal</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Termos de serviço e política de privacidade</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 rounded p-4 transition-colors hover:bg-red-500/10" href="#">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/30 text-red-500 dark:text-red-400">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-red-500 dark:text-red-400">Sair</p>
+</div>
+</a>
+</div>
+</section>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 z-10 border-t border-slate-200 dark:border-slate-800 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
+<nav class="flex justify-around p-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 rounded-lg p-2 text-slate-500 dark:text-slate-400 transition-colors hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined">sports_bar</span>
+<span class="text-xs font-medium">Bares</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 rounded-lg p-2 text-slate-500 dark:text-slate-400 transition-colors hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="text-xs font-medium">Resgates</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 rounded-lg p-2 bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">person</span>
+<span class="text-xs font-bold">Perfil</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

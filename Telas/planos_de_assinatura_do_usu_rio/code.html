@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Assinatura</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec5b13",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221610",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center justify-between p-4">
+<button class="flex items-center justify-center w-10 h-10 text-stone-800 dark:text-stone-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-stone-900 dark:text-white flex-1 text-center">Assinatura</h1>
+<div class="w-10"></div>
+</div>
+</header>
+<main class="flex-grow p-4 sm:p-6">
+<h2 class="text-2xl font-bold text-stone-900 dark:text-white mb-6">Escolha seu plano</h2>
+<div class="grid gap-6">
+<div class="flex flex-col gap-6 p-6 rounded-lg bg-white/5 dark:bg-white/5 border border-primary/20 dark:border-primary/40">
+<div class="flex flex-col gap-2">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white">Básico</h3>
+<p class="flex items-baseline gap-2 text-stone-900 dark:text-white">
+<span class="text-4xl font-extrabold text-primary">R$ 29,99</span>
+<span class="text-base font-semibold text-stone-600 dark:text-stone-300">/mês</span>
+</p>
+</div>
+<ul class="space-y-3 text-stone-700 dark:text-stone-300">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>1 drink grátis por semana</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Acesso a bares parceiros</span>
+</li>
+</ul>
+<button class="w-full py-3 mt-2 text-base font-bold text-white transition-transform duration-200 ease-in-out rounded-full bg-primary hover:scale-105 active:scale-100">
+            Assinar Básico
+          </button>
+</div>
+<div class="relative flex flex-col gap-6 p-6 rounded-lg bg-primary/10 dark:bg-primary/20 border-2 border-primary">
+<div class="absolute top-0 right-4 px-3 py-1 text-xs font-bold tracking-wider text-white uppercase transform -translate-y-1/2 rounded-full bg-primary">
+            Popular
+          </div>
+<div class="flex flex-col gap-2">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white">Premium</h3>
+<p class="flex items-baseline gap-2 text-stone-900 dark:text-white">
+<span class="text-4xl font-extrabold text-primary">R$ 49,99</span>
+<span class="text-base font-semibold text-stone-600 dark:text-stone-300">/mês</span>
+</p>
+</div>
+<ul class="space-y-3 text-stone-700 dark:text-stone-300">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>2 drinks grátis por semana</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Acesso a bares parceiros</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Promoções exclusivas</span>
+</li>
+</ul>
+<button class="w-full py-3 mt-2 text-base font-bold text-white transition-transform duration-200 ease-in-out rounded-full bg-primary hover:scale-105 active:scale-100">
+            Assinar Premium
+          </button>
+</div>
+<div class="flex flex-col gap-6 p-6 rounded-lg bg-white/5 dark:bg-white/5 border border-primary/20 dark:border-primary/40">
+<div class="flex flex-col gap-2">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white">VIP</h3>
+<p class="flex items-baseline gap-2 text-stone-900 dark:text-white">
+<span class="text-4xl font-extrabold text-primary">R$ 79,99</span>
+<span class="text-base font-semibold text-stone-600 dark:text-stone-300">/mês</span>
+</p>
+</div>
+<ul class="space-y-3 text-stone-700 dark:text-stone-300">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>3 drinks grátis por semana</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Acesso a bares parceiros</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Promoções exclusivas</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Prioridade em eventos</span>
+</li>
+</ul>
+<button class="w-full py-3 mt-2 text-base font-bold text-white transition-transform duration-200 ease-in-out rounded-full bg-primary hover:scale-105 active:scale-100">
+            Assinar VIP
+          </button>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 z-10 border-t border-primary/20 dark:border-primary/40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center justify-center flex-1 gap-1 p-2 rounded-lg text-stone-600 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined">sports_bar</span>
+<span class="text-xs font-medium">Bares</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 p-2 rounded-lg text-stone-600 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined">redeem</span>
+<span class="text-xs font-medium">Resgates</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 p-2 rounded-lg text-primary bg-primary/10 dark:bg-primary/20" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-bold">Perfil</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

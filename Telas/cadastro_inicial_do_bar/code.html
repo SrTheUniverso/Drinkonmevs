@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cadastro - Bar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec5b13",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221610",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 antialiased">
+<div class="flex flex-col min-h-screen">
+<header class="relative flex items-center justify-center p-4">
+<button class="absolute left-4 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined">
+          arrow_back_ios
+        </span>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Cadastro</h1>
+</header>
+<main class="flex-grow px-6 py-4">
+<h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-8">Sou Bar</h2>
+<form action="#" class="space-y-6">
+<div>
+<label class="sr-only" for="bar-name">Nome do bar</label>
+<input class="w-full h-14 bg-gray-100 dark:bg-zinc-800 border-transparent focus:border-primary focus:ring-primary rounded-lg px-4 placeholder:text-gray-500 dark:placeholder:text-gray-400 text-gray-900 dark:text-white" id="bar-name" placeholder="Nome do bar" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="email">E-mail do responsável</label>
+<input class="w-full h-14 bg-gray-100 dark:bg-zinc-800 border-transparent focus:border-primary focus:ring-primary rounded-lg px-4 placeholder:text-gray-500 dark:placeholder:text-gray-400 text-gray-900 dark:text-white" id="email" placeholder="E-mail do responsável" type="email"/>
+</div>
+<div class="relative">
+<label class="sr-only" for="password">Senha</label>
+<input class="w-full h-14 bg-gray-100 dark:bg-zinc-800 border-transparent focus:border-primary focus:ring-primary rounded-lg px-4 placeholder:text-gray-500 dark:placeholder:text-gray-400 text-gray-900 dark:text-white" id="password" placeholder="Senha" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-4 text-gray-500 dark:text-gray-400" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+<div class="pt-4">
+<button class="w-full h-14 bg-primary text-white font-bold rounded-full flex items-center justify-center text-base hover:bg-primary/90 transition-colors" type="submit">
+            Criar conta
+          </button>
+</div>
+</form>
+</main>
+<footer class="px-6 py-8 text-center">
+<p class="text-xs text-gray-500 dark:text-gray-400">
+        Ao continuar, você concorda com nossos <a class="font-medium text-primary" href="#">Termos de Serviço</a> e <a class="font-medium text-primary" href="#">Política de Privacidade</a>
+</p>
+</footer>
+</div>
+
+</body></html>

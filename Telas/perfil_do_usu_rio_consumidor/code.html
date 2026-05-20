@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec5b13",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221610",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="flex items-center p-4">
+<div class="w-12"></div>
+<h1 class="flex-1 text-center text-xl font-bold text-white dark:text-white">Perfil</h1>
+<button class="flex h-12 w-12 items-center justify-center rounded-full text-white dark:text-white">
+<span class="material-symbols-outlined text-2xl"> settings </span>
+</button>
+</header>
+<main class="p-4">
+<div class="flex flex-col items-center gap-4">
+<div class="h-32 w-32 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtuppZjUFP8xAht4GCX2C29fa_P5Mu7YpkXzZggoxV07NjOChAaYNQ_Z4PET0oF_L5bBC3VBmhlqgZcJOW2u9KT6ifcJJwwL95LE6ipM-xTN5TjA6jUwX-I-C7v9OugmDfvaJcyZIeodyUxYo_MRRmUwQO6lA_Q5lavzAdznUUENyeZvD4lK1_URU5dPBjShDeKEh7yrhiLKQWjYYJ_qtRUPCBZwgQ6LsDXLiONg96jy0bPx_N-3UrK554wmZ4dPiFwa6p83HAY7E");'></div>
+<div class="text-center">
+<p class="text-2xl font-bold text-white dark:text-white">Lucas Mendes</p>
+<p class="text-base text-white/70 dark:text-white/60">@lucasmendes</p>
+</div>
+</div>
+<section class="mt-8">
+<h2 class="px-4 pb-2 text-lg font-bold text-white dark:text-white">Plano</h2>
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-white/5 p-4 transition-colors hover:bg-white/10">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl"> star </span>
+</div>
+<div class="flex-grow">
+<p class="font-medium text-white dark:text-white">Gerenciar plano</p>
+<p class="text-sm text-white/70 dark:text-white/60">Plano atual: Premium</p>
+</div>
+<span class="material-symbols-outlined text-white/70 dark:text-white/60"> chevron_right </span>
+</div>
+</section>
+<section class="mt-8">
+<h2 class="px-4 pb-2 text-lg font-bold text-white dark:text-white">Resgates</h2>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-4 rounded-lg bg-white/5 p-2">
+<div class="h-14 w-14 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAcgclTMtJhrmibbLqMrnl4bGyv-mcsJ5IdRG35HoZM-doPWylgVJTeRipRyVXkSN334iKWzKY78bVQO0rWqh4hjCAF_H6RXwf4s7N5qT0W2z3QwrBHOQm_cBdpCb5yXNUo3qekGFzpP_vjbQg_wVDoxVL0qnRTJaYBPyFEruiPAQtEaFJHYyCnYipCGPfVE6XAIFmxyfkJA1Fc0zSYGCNxwvnBR39x9oBUZPG7ZPpDvwt3mSYd4kLBK7qTJ7sIrXmd998JHy1d2I");'></div>
+<div class="flex-grow">
+<p class="font-medium text-white dark:text-white">Bar do Zeca</p>
+<p class="text-sm text-white/70 dark:text-white/60">12 de maio de 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-white/5 p-2">
+<div class="h-14 w-14 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCujcq9PI3-WSznQzCgPf1uB4iCVkK4DfkN2vMdT8phwv9ndRFa7kYnEOk3P4WurtzZz_q1_-FuePg1qgV5IM9KgffeeQThCWRBPZ__9nEgrxfjDWJYHgDULGOm03S3hCWsmfdR4XGOw0-Rr6M4_fP2lzHbu3tiKYM_RYQPVimVHZJPI0CctXLagVKKzKKivkb9onAXHcSbhOgNY5KfqbwF2-lcb-7cDpJ0YItAhXq2w-N3kJAxh_tJrJK2ulnD6h6PpL_PIFeVYo4");'></div>
+<div class="flex-grow">
+<p class="font-medium text-white dark:text-white">Cervejaria Artesanal</p>
+<p class="text-sm text-white/70 dark:text-white/60">5 de maio de 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-white/5 p-2">
+<div class="h-14 w-14 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuFdzgPuqBqMoiKuhPrfCi5-Oa138RKNdjXAkRPhxLceV5oT7pY1RYMpKxVoSwNvKaChHdwpzcaP25VvTHnMaNhTSmPhiexyNcTt2oY6WZAEkLv34eM0OD6xOPM-DCNPgY4abmzU1O8nM5agetl9LOjtxhAy5JOI-VuhY7yfkoTCZn1PSrgB1Kv3rsAFPejW_63d2Ph9gy7jqrq3UILpnelr9XLQHD7CxbhQ9kuXcVarN0xBtiGoRPrgembP5P45jMvj33c9MJG08");'></div>
+<div class="flex-grow">
+<p class="font-medium text-white dark:text-white">Boteco do Samba</p>
+<p class="text-sm text-white/70 dark:text-white/60">28 de abril de 2024</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<nav class="sticky bottom-0 border-t border-white/10 bg-background-light/80 py-2 backdrop-blur-lg dark:bg-background-dark/80">
+<div class="mx-auto flex max-w-lg justify-around px-4">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/70 dark:text-white/60" href="#">
+<span class="material-symbols-outlined text-2xl"> sports_bar </span>
+<p class="text-xs font-medium">Bares</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/70 dark:text-white/60" href="#">
+<span class="material-symbols-outlined text-2xl"> confirmation_number </span>
+<p class="text-xs font-medium">Resgates</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl"> person </span>
+<p class="text-xs font-medium">Perfil</p>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>
