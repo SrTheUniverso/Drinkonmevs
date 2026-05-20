@@ -1,6 +1,4 @@
-﻿-- Seed initial fictitious active bars in São Paulo and keep RLS policies explicit.
-
-insert into public.bars (
+﻿insert into public.bars (
   id,
   name,
   description,
