@@ -1,6 +1,7 @@
 import 'package:drinkonme/core/utils/external_maps.dart';
 import 'package:drinkonme/features/bars/domain/bar.dart';
 import 'package:drinkonme/features/bars/presentation/providers/bars_providers.dart';
+import 'package:drinkonme/features/drink_offers/presentation/widgets/today_drink_offers_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -95,6 +96,8 @@ class _BarDetailContent extends StatelessWidget {
             label: 'Instagram',
             value: bar.instagram!,
           ),
+        const SizedBox(height: 24),
+        TodayDrinkOffersSection(barId: bar.id),
         const SizedBox(height: 24),
         FilledButton.icon(
           onPressed: bar.hasCoordinates
