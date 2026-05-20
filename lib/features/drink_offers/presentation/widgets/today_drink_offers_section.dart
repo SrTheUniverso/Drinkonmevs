@@ -1,4 +1,4 @@
-import 'package:drinkonme/features/drink_offers/domain/drink_offer.dart';
+﻿import 'package:drinkonme/features/drink_offers/domain/drink_offer.dart';
 import 'package:drinkonme/features/drink_offers/presentation/providers/drink_offers_providers.dart';
 import 'package:drinkonme/features/redemptions/presentation/redemption_providers.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class TodayDrinkOffersSection extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Drinks disponíveis hoje',
+          'Drinks disponÃ­veis hoje',
           style: Theme.of(
             context,
           ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800),
@@ -111,7 +111,7 @@ class _DrinkOfferCard extends ConsumerWidget {
                   label: 'Resgatados',
                   value: offer.redeemedQuantity,
                 ),
-                _QuantityChip(label: 'Disponíveis', value: available),
+                _QuantityChip(label: 'DisponÃ­veis', value: available),
               ],
             ),
             const SizedBox(height: 14),
@@ -131,7 +131,7 @@ class _DrinkOfferCard extends ConsumerWidget {
                           .prepare(offer.offerId);
 
                       if (context.mounted && token != null) {
-                        context.go('/redemptions/token/${token.id}');
+                        context.push('/redemptions/token/${token.id}');
                       }
                     },
               child: isPreparing
@@ -198,7 +198,7 @@ class _NoOffersToday extends StatelessWidget {
             const SizedBox(width: 12),
             const Expanded(
               child: Text(
-                'Este bar ainda não possui drinks disponíveis para hoje.',
+                'Este bar ainda nÃ£o possui drinks disponÃ­veis para hoje.',
               ),
             ),
           ],

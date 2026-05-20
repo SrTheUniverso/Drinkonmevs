@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:drinkonme/features/redemptions/presentation/redemption_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class RedemptionTokenScreen extends ConsumerStatefulWidget {
   const RedemptionTokenScreen({required this.tokenId, super.key});
@@ -36,7 +37,21 @@ class _RedemptionTokenScreenState extends ConsumerState<RedemptionTokenScreen> {
     final tokenAsync = ref.watch(redemptionTokenProvider(widget.tokenId));
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Token de resgate')),
+      appBar: AppBar(
+        title: const Text('Token de resgate'),
+        leading: IconButton(
+          tooltip: 'Voltar',
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            if (context.canPop()) {
+              context.pop();
+              return;
+            }
+
+            context.go('/home');
+          },
+        ),
+      ),
       body: SafeArea(
         child: tokenAsync.when(
           loading: () => const Center(child: CircularProgressIndicator()),
